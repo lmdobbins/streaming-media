@@ -3,88 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
     <title>MuzakMaker</title>
 </head>
 <body>
     <header>
         <h1>Smooth Jazz</h1>
         <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
-        <nav>
-            <ul>
-                <li><a href="#">MuzakMaker</a></li>
-                <li><a href="#">Trending Songs</a></li>
-                <li><a href="#">Your playlists</a></li>
-                <li><a href="#">Curated Playlists</a></li>
-                <li><a href="#"><img src="images/duke-silver.png" alt= "profile picture of user duke silver wearing a fedora and playing the saxophone"></a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <h2>Main Navigation</h2>
+        <input type="checkbox" id="dropdown"/>
+        <label for="dropdown"><span></span></label>
+        <ul>
+            <li id="logo"><a href="#home">MuzakMaker</a></li>
+            <li><a href="#trending">Trending <br />Songs</a></li>
+            <li><a href="#playlists">Your <br />playlists</a></li>
+            <li><a href="#curated">Curated <br />Playlists</a></li>
+            <li><a href="#user"><img src="images/duke-silver.png" alt= "profile picture of user duke silver wearing a fedora and playing the saxophone"></a></li>
+        </ul>
+    </nav>
     <main>
-        <h2>Trending Songs</h2>
-        <div>
-            <section>
-                <h3>Aloma</h3>
-                <p>Artist Cali</p>
-                <img src="images/aloma-cover.png" alt="white dove flying with a dark brown background">
-                aloma.mp3
-            </section>
-            <section>
-                <h3>My Road</h3>
-                <p>Artist Nesterouk</p>
-                <img src="images/my-road-cover.png" alt="perspective image of a road in the desert with a blue sky and mountains in the distance">
-                my-road.mp3
-            </section>
-            <section>
-                <h3>Papaya</h3>
-                <p>Artist Dredstudio</p>
-                <img src="images/papaya-cover.png" alt="a papaya that is cut in half and set on a tropical green background">
-                papaya.mp3
-            </section>
-            <section>
-                <h3>Smoothies</h3>
-                <p>Artist Black Rhomb</p>
-                <img src="images/smoothies-cover.png" alt="pineapples, bananas, tangerines, raspberries, strawberries, and a pink smoothie in a cup that are all on a white table with a pink background">
-                smoothies.mp3
-            </section>
-            <section>
-                <h3>Successful Performance</h3>
-                <p>Artist Ricky Bombino</p>
-                <img src="images/successful-performance-cover.png" alt="white man in a red shirt posing with a happy expression and his fists raised to his chest in front of a blue brick background">
-                successful-performance.mp3
-            </section>
-        </div>
-        <a href="#">More trending</a>
-        <h2>Your Playlists</h2>
-        <div>
-            <section>
-                <img src="images/best-of-2020-cover.png" alt="the year 2020 written out with a flame in front of it and a black background behind it">
-                <h3>Best of 2020</h3>
-                <P>The music that got you through the lock down.</p>
-            </section>
-            <section>
-                <img src="images/pumpkin-spice-cover.png" alt="a latte with a leaf art on top, in a white mug on top of a wooden table">
-                <h3>Pumpkin Spice</h3>
-                <p>Creamy and spicy, just like your favorite autumnal latte.</p>
-            </section>
-            <section>   
-                <img src="images/quiet-storm-cover.png" alt="a blue, purple, and pink thunderstorm with large clouds and lightning on the right">
-                <h3>Quiet Storm</h3>
-                <p>Slow tempos and relaxed rhythms.</p>
-            </section>
-            <section>        
-                <img src="images/smooth-jazz-cover.png" alt="middle aged white man with black glasses in an olive green shirt against a grey background with a content look on his face">
-                <h3>Smooth Jazz</h3>
-                <p>The pioneers of smooth jazz</p>
-            </section>
-            <section>   
-                <img src="images/smooth-study-cover.png" alt="a person in a yellow sweater with bracelets working on a grey laptop on a wooden table">
-                <h3>Smooth Study</h3>
-                <p>Background music to keep you going while you study.</p>
-            </section>
-        </div>
-        <a href="#">All your playlists</a>
-        <h2>Curated Playlists</h2>
-        <div>
+        <section>
+            <h2>Trending Songs</h2>
+            <div id="trending">
+                <section>
+                    <h3>Aloma</h3>
+                    <p>Artist Cali</p>
+                    <img src="images/aloma-cover.png" alt="white dove flying with a dark brown background">
+                    aloma.mp3
+                </section>
+                <section>
+                    <h3>My Road</h3>
+                    <p>Artist Nesterouk</p>
+                    <img src="images/my-road-cover.png" alt="perspective image of a road in the desert with a blue sky and mountains in the distance">
+                    my-road.mp3
+                </section>
+                <section>
+                    <h3>Papaya</h3>
+                    <p>Artist Dredstudio</p>
+                    <img src="images/papaya-cover.png" alt="a papaya that is cut in half and set on a tropical green background">
+                    papaya.mp3
+                </section>
+                <section>
+                    <h3>Smoothies</h3>
+                    <p>Artist Black Rhomb</p>
+                    <img src="images/smoothies-cover.png" alt="pineapples, bananas, tangerines, raspberries, strawberries, and a pink smoothie in a cup that are all on a white table with a pink background">
+                    smoothies.mp3
+                </section>
+                <section>
+                    <h3>Successful Performance</h3>
+                    <p>Artist Ricky Bombino</p>
+                    <img src="images/successful-performance-cover.png" alt="white man in a red shirt posing with a happy expression and his fists raised to his chest in front of a blue brick background">
+                    successful-performance.mp3
+                </section>
+            </div>
+        </section>
+        <a id="button" href="#">More trending</a>
+        <section>
+            <h2>Your Playlists</h2>
+            <div  id="playlists">
+                <section>
+                    <img src="images/best-of-2020-cover.png" alt="the year 2020 written out with a flame in front of it and a black background behind it">
+                    <h3>Best of 2020</h3>
+                    <P>The music that got you through the lock down.</p>
+                </section>
+                <section>
+                    <img src="images/pumpkin-spice-cover.png" alt="a latte with a leaf art on top, in a white mug on top of a wooden table">
+                    <h3>Pumpkin Spice</h3>
+                    <p>Creamy and spicy, just like your favorite autumnal latte.</p>
+                </section>
+                <section>   
+                    <img src="images/quiet-storm-cover.png" alt="a blue, purple, and pink thunderstorm with large clouds and lightning on the right">
+                    <h3>Quiet Storm</h3>
+                    <p>Slow tempos and relaxed rhythms.</p>
+                </section>
+                <section>        
+                    <img src="images/smooth-jazz-cover.png" alt="middle aged white man with black glasses in an olive green shirt against a grey background with a content look on his face">
+                    <h3>Smooth Jazz</h3>
+                    <p>The pioneers of smooth jazz</p>
+                </section>
+                <section>   
+                    <img src="images/smooth-study-cover.png" alt="a person in a yellow sweater with bracelets working on a grey laptop on a wooden table">
+                    <h3>Smooth Study</h3>
+                    <p>Background music to keep you going while you study.</p>
+                </section>
+            </div>
+        </section>
+        <a id="button" href="#">All your playlists</a>
+        <section>
+            <h2>Curated Playlists</h2>
+            <div id="curated">
                 <section>
                     <img src="images/boozy-brunch-cover.png" alt="group of people at breakfast with food on a white table and toasting with their drinks which have clear liquid and red fruit">
                     <h3>Boozy Brunch</h3>
@@ -110,8 +119,9 @@
                     <h3>Jazz Saxophone</h3>
                     <p>The greatest collection of your sax favorites.</p>
                 </section>
-        </div>
-        <a href="#">More curated</a>
+            </div>
+        </section>
+        <a id="button" href="#">More curated</a>
     </main>
     <footer>
         <small>Copyright 2022 Smooth Jazz</small>
