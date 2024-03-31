@@ -18,22 +18,22 @@ body {
     margin: 0 auto;
     background-color: var(--white);
     width: 375px;
-    color: var(--white)
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.125fr 0.125fr 7fr 0.0625fr;
 }
 header {
-    background-color: var(--royal-blue);
+    background: linear-gradient(to right,#2104D9,black);
+    padding: 15px 25px;
+    position: relative;
 }
 nav {
     background-color: var(--dark-blue);
-    position: fixed;
-    top: 0;
-    width: 375px;
+    grid-row: 1/2;
 }
 h1, h2, h3 {
     text-transform: uppercase;
-}
-#logo {
-    font-variant: small-caps;
 }
 nav h2 {
     font-size: 0px;
@@ -41,9 +41,27 @@ nav h2 {
 ul {
     list-style: none;
     margin: 0 auto;
+    text-align: center;
+}
+li {
+    text-transform: uppercase;
+}
+#logo {
+    text-transform: none;
+    font-variant: small-caps;
+    font-size: 1.75em;
+    font-weight: bold;
+    position: absolute;
+    left: 280px;
+    top: 35px;
+
+}
+ul a:hover {
+    background-color: var(--maroon);
 }
 a {
     text-decoration: none;
+    color: var(--white)
 }
 h1 {
     font-size: 1.25em;
@@ -59,28 +77,49 @@ h2 {
 p, dl, dd {
     font-size: 1em;
 }
-footer p {
+footer {
     font-size: 0.75em;
     color: var(--maroon);
+    background-color: var(--white);
+    text-align: center;
+    padding: 15px;
 }
 #button {
     background-color: var(--maroon);
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 4px;
     margin-left: 25px;
     margin-bottom: 25px;
     margin-top: 10px;
 }
+#button:hover {
+    background-color: var(--very-dark-blue); 
+}
 #trending section {
     color: var(--maroon);
-    background-color: lightgrey;
     margin: 10px;
+    position: relative;
 }
 #trending {
     width: 375px;
     overflow: scroll;
+    overflow-x: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#trending section div {
+    position: absolute;
+    background-color: rgba(211, 211, 211, 0.8);
+    width: 296px;
+    z-index: 1;
+    top: 225px;
+    padding-left: 15px;
+}
+
+audio {
+    position: relative;
+    bottom: 220px;
+    left: 5px;
 }
 #playlists section {
     background-color: var(--blue);
@@ -115,6 +154,72 @@ footer p {
     #trending {
         width: 834px;
     }
+    #playlists {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        width: 417px;
+        height: 600px;
+    }
+    #curated {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        width: 417px;
+        height: 600px;
+    }
+    #extra {
+        display: flex;
+        margin-top: 50px;
+    }
+    #button {
+        float: right;
+        margin-right: 25px;
+    }
+    #logo {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    ul {
+        margin: 25px auto;
+        display: flex;
+        align-items: center;
+        width: 834px;
+    }
+    #playlists section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr;
+    }
+    #playlists section img {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    #playlists section h3 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    #playlists section p {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    #curated section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr;
+    }
+    #curated section img {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    #curated section h3 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    #curated section p {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    
 }
 /*pasted content*/
 ul {
@@ -182,4 +287,41 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     label span, input {
         display: none;
     }
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: var(--white);
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: var(--white);
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, 0.5);
 }
