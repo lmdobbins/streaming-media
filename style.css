@@ -84,15 +84,23 @@ footer {
     text-align: center;
     padding: 15px;
 }
-#button {
+#button1, #button2, #button3 {
     background-color: var(--maroon);
-    padding: 10px 20px;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
     border-radius: 4px;
     margin-left: 25px;
     margin-bottom: 25px;
     margin-top: 10px;
 }
-#button:hover {
+#button1:hover {
+    background-color: var(--very-dark-blue); 
+}
+#button2:hover {
+    background-color: var(--very-dark-blue); 
+}
+#button3:hover {
     background-color: var(--very-dark-blue); 
 }
 #trending section {
@@ -102,10 +110,12 @@ footer {
 }
 #trending {
     width: 375px;
-    overflow: scroll;
+    height: 350px;
+    overflow-y: scroll;
     overflow-x: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 15px;
 }
 #trending section div {
     position: absolute;
@@ -133,6 +143,7 @@ audio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: var(--light-blue);
+    margin-bottom: 15px;
 }
 #curated section {
     background-color: var(--darker-blue);
@@ -146,6 +157,7 @@ audio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: var(--dark-blue);
+    margin-bottom: 15px;
 }
 @media screen and (min-width:834px){
     body {
@@ -170,7 +182,7 @@ audio {
         display: flex;
         margin-top: 50px;
     }
-    #button {
+    #button1, #button2, #button3 {
         float: right;
         margin-right: 25px;
     }
